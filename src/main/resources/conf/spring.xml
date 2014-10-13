@@ -17,5 +17,7 @@
     <bean id="bookService" class="com.thoughtworks.dolphin.service.impl.BookServiceImpl">
     </bean>
 -->
+    <bean id="conversationService" class="com.thoughtworks.cathywu.service.impl.ConversationServiceImpl">
+    </bean>
 
 </beans>

@@ -7,7 +7,7 @@ import java.util.List;
 public class ConversationPool {
     private List<String> talks;
 
-    private static final int MAX_TALKS_COUNT = 20;
+    private static final int MAX_TALKS_COUNT = 40;
 
     private static ConversationPool pool = null;
     private ConversationPool() {
