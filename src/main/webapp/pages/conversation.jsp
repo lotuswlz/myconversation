@@ -23,6 +23,11 @@
             border: solid black 2px;
             OVERFLOW:auto;
         }
+        ul,li {
+            list-style: none;
+            margin-left:0px;
+            width: 95%;
+        }
     </style>
     <script>
         var basePath = '${basePath}';
@@ -49,13 +54,17 @@
 
     function loadConversations() {
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: basePath + "/test/listConversation.do",
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             success: function (result) {
+                var userName = $.cookie('username');
                 var talkValue = "";
                 $.each(result, function (i, item) {
+//                    if (item.indexOf(userName) >= 0) {
+//                        item = "<span style='background-color: #FFCCCC'>" + item + "</span>"
+//                    }
                     talkValue += item + "<br/>";
                 });
 
@@ -70,6 +79,9 @@
     function sendTalk() {
             var userName = $.cookie('username');
             var talk = $("#conv_self").val();
+            if (talk === "") {
+                return;
+            }
             var datas = {
                 userName:userName,
                 talk:talk

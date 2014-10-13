@@ -15,7 +15,7 @@ public class ConversationController {
     @Autowired
     private ConversationService conversationService;
 
-    @RequestMapping(value = "/listConversation", method = RequestMethod.POST)
+    @RequestMapping(value = "/listConversation", method = RequestMethod.GET)
     @ResponseBody
     public List<String> listBooks() {
         return conversationService.getAllConversations();
