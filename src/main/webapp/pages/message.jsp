@@ -10,16 +10,7 @@
     <title>Spring MVC</title>
 </head>
 <body>
-<a href="<%=request.getContextPath()%>/main">Home</a>
-<br/><br/>
-<h2>To see <a href="${basePath}/test/list/book">Book</a></h2>
-<h2>To see <a href="${basePath}/test/list/user">User</a></h2>
-<p></p>
-<hr/>
-<h3>Enter a nick name and login to talk with others</h3>
-<form action="loginSubmit.do" method="post">
-<label>Your Nick Name: </label><input type="text" name="userName"/>
-<input type="submit" value="Login"/>
-</form>
+<h1>Something wrong with ${title}</h1>
+<h4>${message}</h4>
 </body>
 </html>
